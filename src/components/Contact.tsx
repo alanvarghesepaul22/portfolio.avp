@@ -50,6 +50,7 @@ export default function Contact() {
                   toast.success("Email sent successfully!")
                 }}
                 className="mx-auto mb-0 mt-8 max-w-md space-y-4"
+                autoComplete="off"
               >
                 {/* name */}
                 <div>
