@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter,Bai_Jamjuree } from "next/font/google";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="!scroll-smooth">
       <body className={`${baijumjuree.className} bg-gray-50 text-gray-950`}>
         {/* <div
           className="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem]
@@ -34,6 +35,7 @@ export default function RootLayout({
         ></div> */}
         <Header/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

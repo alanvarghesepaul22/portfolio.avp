@@ -12,7 +12,8 @@ import Link from "next/link";
 export default function Intro() {
   return (
     <>
-      <section className="w-full flex flex-wrap-reverse justify-center items-center mt-6 sm:mt-[-2rem] lg:mt-24 py-5">
+      <section id="intro" className="w-full flex flex-wrap-reverse justify-center 
+      items-center mt-6 sm:mt-[-2rem] lg:mt-24 py-5 scroll-mt-28">
         <div className="">
           <div className="relative w-fit ml-10 lg:ml-0 sm:mt-[-4rem]">
             <motion.div
@@ -66,20 +67,20 @@ export default function Intro() {
             <div className="mt-6 flex items-center space-x-4">
               <Link
                 href="https://www.linkedin.com/in/alan-varghese-paul-1676ba23a/"
-                target="_blank"
+                target="__blank"
               >
                 <AiFillLinkedin className="text-3xl lg:text-4xl hover:text-blue-800" />
               </Link>
 
               <Link
                 href="https://github.com/alanvarghesepaul22"
-                target="_blank"
+                target="__blank"
               >
                 <AiFillGithub className="text-3xl lg:text-4xl hover:text-violet-800" />
               </Link>
 
               <Link
-                href="/"
+                href="#contact"
                 className="text-sm md:text-base lg:text-lg font-medium border border-gray-900 space-x-2 flex items-center 
               rounded px-3 lg:px-5 py-1 shadow-sm hover:bg-gray-950 hover:text-white  transition-all"
               >

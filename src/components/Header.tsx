@@ -1,26 +1,48 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { links } from "@/lib/data";
 import { motion } from "framer-motion";
 let logoString = "<avp/>";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isNavShadow, setNavShadow] = useState(false);
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    const setShadow = () => {
+      if (window.pageYOffset > 0) {
+        setNavShadow(true);
+      } else {
+        setNavShadow(false);
+      }
+    };
+    window.addEventListener("scroll", setShadow);
+    return () => {
+      window.removeEventListener("scroll", setShadow);
+    };
+  }, []);
+
   return (
     <motion.header
-      className="w-full h-16 bg-gray-50 py-5 fixed top-0 z-[100]"
+      className="w-full h-16 bg-gray-50 fixed top-0 z-[100]"
       initial={{ y: -100, x: "0%", opacity: 0 }}
       animate={{ y: 0, x: "0%", opacity: 1 }}
     >
-      <nav className="flex flex-row items-center justify-between px-6 lg:px-10">
-        <h1 className="font-semibold text-xl sm:text-2xl lg:text-3xl cursor-default">
+      <nav
+        className={`h-full flex flex-row items-center justify-between px-6 lg:px-10 py-4 ${
+          isNavShadow ? "shadow" : null
+        }`}
+      >
+        <Link
+          href="#intro"
+          className="font-semibold text-xl sm:text-2xl lg:text-3xl cursor-default"
+        >
           {logoString}
-        </h1>
+        </Link>
         <div className="text-center hidden md:block">
           {links.map((link) => (
             <Link
@@ -37,7 +59,7 @@ export default function Header() {
           <button
             onClick={toggleNavbar}
             type="button"
-            className="inline-flex items-center justify-center p-2 text-gray-950 hover:text-light-white focus:outline-none"
+            className="inline-flex items-center justify-center  text-gray-950 hover:text-light-white focus:outline-none"
           >
             <span className="sr-only">Menu</span>
             {!isOpen ? (
@@ -80,10 +102,10 @@ export default function Header() {
       {isOpen && (
         <div className="md:hidden mt-5 px-3 ">
           <div>
-            <ul className="list-none text-white space-y-1 mx-0 mb-3 text-base bg-gray-950 py-1 rounded-md">
+            <ul className="list-none text-gray-200 space-y-1 mx-0 mb-3 text-base bg-zinc-900 py-1 rounded-md">
               {links.map((link) => (
                 <li
-                  className="py-2 px-5 rounded hover:text-primary hover:bg-zinc-900 transition-all"
+                  className="py-2 px-5 rounded hover:text-primary hover:bg-zinc-800 border-b border-zinc-800 transition-all font-medium"
                   key={link.hash}
                 >
                   <Link href={link.hash}>{link.name}</Link>
