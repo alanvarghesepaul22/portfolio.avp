@@ -30,10 +30,10 @@ export default function Contact() {
           <div className="flex flex-col justify-center items-start mt-4">
             {/* heading */}
             <div className=" w-full flex flex-col items-center md:items-start">
-              <p className="text-2xl md:text-3xl font-semibold text-gray-800">
+              <p className="text-2xl md:text-3xl font-semibold text-gray-800 dark:text-gray-200">
                 Hey! Let’s Talk.
               </p>
-              <p className=" md:text-xl text-gray-600">Send me a message.</p>
+              <p className=" md:text-xl text-gray-600 dark:text-gray-400">Send me a message.</p>
             </div>
 
             {/* form */}
@@ -59,7 +59,9 @@ export default function Contact() {
                       type="text"
                       required
                       maxLength={500}
-                      className="w-full rounded bg-white border border-gray-300 placeholder:text-gray-400 p-3 pe-12 text-base shadow"
+                      className="w-full rounded bg-white dark:bg-gray-900 border
+                       border-gray-300 dark:border-gray-700 placeholder:text-gray-400
+                        dark:placeholder:text-gray-500 p-3 pe-12 text-base shadow"
                       placeholder="Your name"
                     />
                   </div>
@@ -72,7 +74,9 @@ export default function Contact() {
                       type="email"
                       required
                       maxLength={500}
-                      className="w-full rounded bg-white border border-gray-300 placeholder:text-gray-400 p-3 pe-12 text-base shadow"
+                      className="w-full rounded bg-white dark:bg-gray-900 border
+                       border-gray-300 dark:border-gray-700 placeholder:text-gray-400
+                        dark:placeholder:text-gray-500 p-3 pe-12 text-base shadow"
                       placeholder="Your email"
                     />
                   </div>
@@ -84,7 +88,9 @@ export default function Contact() {
                     <textarea
                       name="senderMessage"
                       rows={5}
-                      className="w-full rounded bg-white border border-gray-300 placeholder:text-gray-400 p-3 pe-12 text-base shadow resize-none"
+                      className="w-full rounded bg-white dark:bg-gray-900 border border-gray-300
+                       dark:border-gray-700 placeholder:text-gray-400
+                       dark:placeholder:text-gray-500 p-3 pe-12 text-base shadow resize-none"
                       placeholder="Your message goes here...."
                     ></textarea>
                   </div>
@@ -102,42 +108,42 @@ export default function Contact() {
             <div>
               <Lottie
                 animationData={ContactMeLottie}
-                className="w-[12rem] sm:w-[13rem] md:w-[18rem] lg:w-[18rem]"
+                className="w-[12rem] sm:w-[13rem] md:w-[18rem] lg:w-[18rem] dark:stroke-gray-400"
               />
             </div>
             {/* or contact */}
             <div className="flex flex-col items-center">
-              <p className="font-medium text-xl text-gray-600">
+              <p className="font-medium text-xl text-gray-600 dark:text-gray-100">
                 or say hello here!
               </p>
 
               <div className="flex flex-col mt-8 space-y-3">
                 <Link
                   href="/"
-                  className="flex items-center rounded bg-gray-200 hover:bg-gray-300 px-4 py-2 space-x-4"
+                  className="flex items-center rounded bg-gray-200 dark:bg-gray-900 hover:bg-gray-300 dark:hover:bg-gray-800 px-4 py-2 space-x-4"
                 >
                   <IoMdMail className="text-3xl text-yellow-600" />
-                  <p className="font-medium text-gray-700">
+                  <p className="font-medium text-gray-700 dark:text-gray-300">
                     alanvarghesepaul29@gmail.com
                   </p>
                 </Link>
                 <Link
                   href="https://www.linkedin.com/in/alan-varghese-paul-1676ba23a/"
                   target="_blank"
-                  className="flex items-center rounded bg-gray-200 hover:bg-gray-300 px-4 py-2 space-x-4"
+                  className="flex items-center rounded bg-gray-200 dark:bg-gray-900 hover:bg-gray-300 dark:hover:bg-gray-800 px-4 py-2 space-x-4"
                 >
                   <AiFillLinkedin className="text-3xl text-blue-800" />
-                  <p className="font-medium text-gray-700">
+                  <p className="font-medium text-gray-700 dark:text-gray-300">
                     alan-varghese-paul-1676ba23a
                   </p>
                 </Link>
                 <Link
                   href="https://github.com/alanvarghesepaul22"
                   target="_blank"
-                  className="flex items-center rounded bg-gray-200 hover:bg-gray-300 px-4 py-2 space-x-4"
+                  className="flex items-center rounded bg-gray-200 dark:bg-gray-900 hover:bg-gray-300 dark:hover:bg-gray-800 px-4 py-2 space-x-4"
                 >
                   <AiFillGithub className="text-3xl text-gray-600" />
-                  <p className="font-medium text-gray-700">
+                  <p className="font-medium text-gray-700 dark:text-gray-300">
                     alanvarghesepaul22
                   </p>
                 </Link>

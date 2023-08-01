@@ -48,11 +48,11 @@ export default function Project() {
 
                 <p className="w-full text-justify">{description}</p>
 
-                <div className="grid  sm:grid-cols-2 space-y-3 sm:space-y-0 sm:space-x-4 w-fit">
+                <div className="grid sm:grid-cols-2 space-y-3 sm:space-y-0 sm:space-x-4 w-fit">
                   <Link
                     href={githubLink}
                     target="_blank"
-                    className="flex items-center space-x-2 bg-gray-200 hover:bg-gray-300 px-4 rounded text-gray-950 transition-all py-1"
+                    className="flex items-center justify-center space-x-2 bg-gray-200 hover:bg-gray-300 dark:hover:bg-gray-400 px-4 rounded text-gray-950 transition-all py-1"
                   >
                     <AiFillGithub />
                     <p>Source code</p>
@@ -61,7 +61,7 @@ export default function Project() {
                   <Link
                     href={liveSiteLink}
                     target="_blank"
-                    className="flex items-center space-x-2 bg-gray-800 hover:bg-gray-950 px-4 rounded text-white py-1"
+                    className="flex items-center justify-center space-x-2 bg-gray-800 dark:bg-gray-800 hover:bg-gray-950 dark:hover:bg-gray-900  px-4 rounded text-white transition-all py-1"
                   >
                     <BsGlobe />
                     <p>Live Site</p>

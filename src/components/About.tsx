@@ -13,9 +13,9 @@ export default function About() {
       id="about"
       className=" flex flex-col items-center justify-center scroll-mt-24"
     >
-      <div className="flex flex-col items-center justify-center w-full bg-gray-200 py-14">
+      <div className="flex flex-col items-center justify-center w-full bg-gray-200 dark:bg-slate-950 py-14">
         <p className="text-lg md:text-2xl font-bold mt-1 mb-4">ABOUT ME</p>
-        <p className="w-4/5 lg:w-3/5  md:text-[17px] text-justify md:mt-8 font-medium text-gray-900">
+        <p className="w-4/5 lg:w-3/5  md:text-[17px] text-justify md:mt-8 font-medium text-gray-900 dark:text-gray-300">
           Hello! I'm Alan Varghese Paul, currently pursuing B. Tech in Computer
           Science and Engineering at SCMS School of Engineering and Technology
           (SSET), Kerala, India. I’m a passionate and creative web developer

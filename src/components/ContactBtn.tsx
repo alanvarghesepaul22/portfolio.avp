@@ -8,7 +8,10 @@ export default function ContactBtn() {
     <div className="flex items-center justify-between">
       <button
         type="submit"
-        className="group w-full hover:scale-95 disabled:scale-100 disabled:bg-opacity-65 transition-all flex justify-center items-center rounded bg-gray-950 hover:bg-gray-800 py-2 font-medium text-white"
+        className="group w-full hover:scale-95 disabled:scale-100 
+        disabled:bg-opacity-65 transition-all flex justify-center 
+        items-center rounded bg-gray-950 dark:bg-gray-400 hover:bg-gray-800 
+        dark:hover:bg-gray-300 py-2 font-medium text-white dark:text-gray-950"
         disabled={pending}
       >
         {pending ? (

@@ -4,6 +4,8 @@ import type { Metadata } from "next";
 import { Inter, Bai_Jamjuree } from "next/font/google";
 import Footer from "@/components/Footer";
 import { Toaster } from "react-hot-toast";
+import ThemeSwitch from "@/components/ThemeSwitch";
+import ThemeContextProvider from "../../context/theme";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,36 +26,32 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="!scroll-smooth">
-      <body className={`${baijumjuree.className} bg-gray-50 text-gray-950`}>
-        {/* <div
-          className="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem]
-         w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"
-        ></div>
-        <div
-          className="bg-[#dbd7fb] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] 
-        w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem]
-         xl:left-[-15rem] 2xl:left-[-5rem]"
-        ></div> */}
-        <Header />
-        {children}
-        <Toaster
-          position="top-center"
-          toastOptions={{
-            success: {
-              style: {
-                background: "#E8F5E9",
-                color: "#1B5E20",
+      <body
+        className={`${baijumjuree.className} bg-gray-50 dark:bg-gray-950 text-gray-950 dark:text-gray-50`}
+      >
+        <ThemeContextProvider>
+          <Header />
+          {children}
+          <Toaster
+            position="top-center"
+            toastOptions={{
+              success: {
+                style: {
+                  background: "#E8F5E9",
+                  color: "#1B5E20",
+                },
               },
-            },
-            error: {
-              style: {
-                background: "#FFEBEE",
-                color: "#80393C",
+              error: {
+                style: {
+                  background: "#FFEBEE",
+                  color: "#80393C",
+                },
               },
-            },
-          }}
-        />
-        <Footer />
+            }}
+          />
+          <Footer />
+          <ThemeSwitch />
+        </ThemeContextProvider>
       </body>
     </html>
   );

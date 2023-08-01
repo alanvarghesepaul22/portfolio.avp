@@ -28,13 +28,13 @@ export default function Header() {
 
   return (
     <motion.header
-      className="w-full h-16 bg-gray-50 fixed top-0 z-[100]"
+      className="w-full h-16  bg-gray-50 dark:bg-gray-950 transition-all fixed top-0 z-[100]"
       initial={{ y: -100, x: "0%", opacity: 0 }}
       animate={{ y: 0, x: "0%", opacity: 1 }}
     >
       <nav
         className={`h-full flex flex-row items-center justify-between px-6 lg:px-10 py-4 ${
-          isNavShadow ? "shadow" : null
+          isNavShadow ? "shadow dark:shadow-gray-900" : null
         }`}
       >
         <Link
@@ -48,7 +48,7 @@ export default function Header() {
             <Link
               href={link.hash}
               key={link.hash}
-              className="mx-5 px-1 font-medium hover:text-gray-950 text-gray-700"
+              className="mx-5 px-1 font-medium text-gray-700 dark:text-gray-300 hover:text-gray-950 dark:hover:text-gray-50"
             >
               {link.name}
             </Link>
@@ -59,7 +59,7 @@ export default function Header() {
           <button
             onClick={toggleNavbar}
             type="button"
-            className="inline-flex items-center justify-center  text-gray-950 hover:text-light-white focus:outline-none"
+            className="inline-flex items-center justify-center focus:outline-none"
           >
             <span className="sr-only">Menu</span>
             {!isOpen ? (
@@ -102,10 +102,10 @@ export default function Header() {
       {isOpen && (
         <div className="md:hidden mt-5 px-3 ">
           <div>
-            <ul className="list-none text-gray-200 space-y-1 mx-0 mb-3 text-base bg-zinc-900 py-1 rounded-md">
+            <ul className="list-none text-gray-200 space-y-1 mx-0 mb-3 text-base bg-zinc-900 dark:bg-gray-900 py-1 rounded-md">
               {links.map((link) => (
                 <li
-                  className="py-2 px-5 rounded hover:text-primary hover:bg-zinc-800 border-b border-zinc-800 transition-all font-medium"
+                  className="py-2 px-5 rounded hover:text-primary hover:bg-zinc-800 dark:hover:bg-gray-800 border-b border-zinc-800 dark:border-gray-800 transition-all font-medium"
                   key={link.hash}
                 >
                   <Link href={link.hash}>{link.name}</Link>

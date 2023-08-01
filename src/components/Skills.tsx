@@ -25,7 +25,7 @@ export default function Skills() {
       }}
     >
       <div
-        className="w-full bg-gray-200 py-8 mt-2 md:mt-0 md:py-16 
+        className="w-full bg-gray-200 dark:bg-slate-950 py-8 mt-2 md:mt-0 md:py-16 
       lg:py-10 flex flex-col items-center justify-center"
       >
         <p className="text-lg md:text-2xl font-bold mt-1">SKILLS</p>
@@ -37,7 +37,7 @@ export default function Skills() {
               <div
                 key={id}
                 className="flex flex-col items-center px-4 sm:px-10 md:px-12 lg:px-6 
-              py-2 md:py-5 border hover:border-gray-100 hover:shadow-sm transition-all"
+              py-2 md:py-5 rounded hover:border hover:border-gray-100 dark:hover:border-slate-900 hover:shadow-sm transition-all dark:transition-none"
               >
                 <Icon
                   className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
