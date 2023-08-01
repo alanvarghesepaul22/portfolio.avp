@@ -2,11 +2,13 @@
 import React from "react";
 import Lottie from "lottie-react";
 import ContactMeLottie from "../../public/contactme.json";
-import { AiOutlineSend, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { IoMdMail } from "react-icons/io";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { sendEmail } from "../../actions/sendEmail";
+import ContactBtn from "./ContactBtn";
+import toast from "react-hot-toast";
 
 export default function Contact() {
   return (
@@ -38,7 +40,14 @@ export default function Contact() {
             <div className="w-full sm:w-[23rem]">
               <form
                 action={async (FormData) => {
-                  await sendEmail(FormData);
+                  const { data, error } = await sendEmail(FormData);
+
+                  if (error) {
+                    toast.error(error);
+                    return;
+                  }
+
+                  toast.success("Email sent successfully!")
                 }}
                 className="mx-auto mb-0 mt-8 max-w-md space-y-4"
               >
@@ -82,15 +91,7 @@ export default function Contact() {
                 </div>
 
                 {/* button */}
-                <div className="flex items-center justify-between">
-                  <button
-                    type="submit"
-                    className="group w-full hover:scale-95 transition-all flex justify-center items-center rounded bg-gray-950 hover:bg-gray-800 py-2 font-medium text-white"
-                  >
-                    Send Message
-                    <AiOutlineSend className="group-hover:translate-x-2 ml-5 transition-all" />
-                  </button>
-                </div>
+                <ContactBtn />
               </form>
             </div>
           </div>

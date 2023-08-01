@@ -1,15 +1,16 @@
 import Header from "@/components/Header";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter,Bai_Jamjuree } from "next/font/google";
+import { Inter, Bai_Jamjuree } from "next/font/google";
 import Footer from "@/components/Footer";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const baijumjuree =Bai_Jamjuree({
-  weight:["200","300","400","500","600","700"],
-  subsets:["latin"]
-})
+const baijumjuree = Bai_Jamjuree({
+  weight: ["200", "300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Alan | Personal Portfolio",
@@ -33,9 +34,26 @@ export default function RootLayout({
         w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem]
          xl:left-[-15rem] 2xl:left-[-5rem]"
         ></div> */}
-        <Header/>
+        <Header />
         {children}
-        <Footer/>
+        <Toaster
+          position="top-center"
+          toastOptions={{
+            success: {
+              style: {
+                background: "#E8F5E9",
+                color: "#1B5E20",
+              },
+            },
+            error: {
+              style: {
+                background: "#FFEBEE",
+                color: "#80393C",
+              },
+            },
+          }}
+        />
+        <Footer />
       </body>
     </html>
   );
