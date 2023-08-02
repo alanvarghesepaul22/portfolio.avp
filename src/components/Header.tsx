@@ -61,7 +61,7 @@ export default function Header() {
             type="button"
             className="inline-flex items-center justify-center focus:outline-none"
           >
-            <span className="sr-only">Menu</span>
+            
             {!isOpen ? (
               <svg
                 className="block h-6 w-6"

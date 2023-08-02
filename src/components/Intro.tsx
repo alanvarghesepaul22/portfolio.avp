@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import avatar from "../../public/avatar.jpg";
+import imageLogo from "../../public/avatar.jpg";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
@@ -32,10 +32,10 @@ export default function Intro() {
             >
               {" "}
               <Image
-                src={avatar}
+                src={imageLogo}
                 height="192"
                 width="192"
-                alt="avatar"
+                alt="imageLogo"
                 className="h-auto w-14 lg:w-20 rounded-full border-[.35rem] object-cover border-white dark:border-gray-400 shadow-xl"
               />
             </motion.div>
