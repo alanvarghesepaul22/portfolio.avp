@@ -120,7 +120,7 @@ export default function Contact() {
 
               <div className="flex flex-col mt-8 space-y-3">
                 <Link
-                  href="/"
+                  href="mailto:alanvarghesepaul29@gmail.com&subject=Portfolio Feedback"
                   className="flex items-center rounded bg-gray-200 dark:bg-gray-900 hover:bg-gray-300 dark:hover:bg-gray-800 px-4 py-2 space-x-4"
                 >
                   <IoMdMail className="text-3xl text-yellow-600" />
