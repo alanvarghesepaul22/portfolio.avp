@@ -101,6 +101,7 @@ export default function Intro() {
                 <Link
                   href="../../public/Alan_Varghese_Paul_Resume.pdf"
                   download={true}
+                  target="_blank"
                   className="underline font-semibold hover:text-blue-600"
                 >
                   resume
