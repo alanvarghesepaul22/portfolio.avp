@@ -1,10 +1,7 @@
-import Header from "@/components/Header";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter, Bai_Jamjuree } from "next/font/google";
-import Footer from "@/components/Footer";
 import { Toaster } from "react-hot-toast";
-import ThemeSwitch from "@/components/ThemeSwitch";
 import ThemeContextProvider from "../../context/theme";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -30,7 +27,6 @@ export default function RootLayout({
         className={`${baijumjuree.className} bg-gray-50 dark:bg-gray-950 text-gray-950 dark:text-gray-50`}
       >
         <ThemeContextProvider>
-          <Header />
           {children}
           <Toaster
             position="top-center"
@@ -49,8 +45,6 @@ export default function RootLayout({
               },
             }}
           />
-          <Footer />
-          <ThemeSwitch />
         </ThemeContextProvider>
       </body>
     </html>

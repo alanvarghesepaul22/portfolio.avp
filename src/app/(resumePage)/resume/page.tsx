@@ -1,4 +1,4 @@
-import ResumeFrame from "@/components/ResumeFrame";
+import ResumeFrame from "@/components/resume/ResumeFrame";
 import React from "react";
 
 export default function page() {
@@ -8,3 +8,4 @@ export default function page() {
     </div>
   );
 }
+
