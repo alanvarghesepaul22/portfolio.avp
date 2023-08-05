@@ -10,6 +10,7 @@ import { AiFillLinkedin, AiFillGithub, AiFillWechat } from "react-icons/ai";
 import { BsArrowRight } from "react-icons/bs";
 import Link from "next/link";
 import { useTheme } from "../../context/theme";
+ 
 
 export default function Intro() {
   const { theme, toggleTheme } = useTheme();
@@ -99,8 +100,7 @@ export default function Intro() {
               <p className="md:text-lg">
                 Download my{" "}
                 <Link
-                  href="../../public/Alan_Varghese_Paul_Resume.pdf"
-                  download={true}
+                  href="/resume"
                   target="_blank"
                   className="underline font-semibold hover:text-blue-600"
                 >
