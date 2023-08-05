@@ -99,7 +99,7 @@ export default function Intro() {
               <p className="md:text-lg">
                 Download my{" "}
                 <Link
-                  href="/"
+                  href="../../public/Alan_Varghese_Paul_Resume.pdf"
                   download={true}
                   className="underline font-semibold hover:text-blue-600"
                 >
