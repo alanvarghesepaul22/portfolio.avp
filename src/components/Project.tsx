@@ -33,14 +33,15 @@ export default function Project() {
                 </p>
 
                 <div className="w-4/5 sm:w-3/5 md:w-3/5 grid grid-cols-4 sm:grid-cols-4 ">
-                  {Icon.map((Icon) => {
+                  {Icon.map((Icon,index) => {
+                    let {Iconfile,iconTooltip} =Icon
                     return (
                       <div
-                        key={Icon}
+                        key={index}
                         className="flex flex-col items-center justify-center px-4 sm:px-10 md:px-12 lg:px-6 
               py-2 md:py-1"
                       >
-                        <Icon className="text-3xl sm:text-4xl md:text-3xl" />
+                        <Iconfile className="text-3xl sm:text-4xl md:text-3xl" title={iconTooltip}/>
                       </div>
                     );
                   })}

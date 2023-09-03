@@ -1,5 +1,12 @@
 import { RiJavascriptFill, RiReactjsFill } from "react-icons/ri";
-import { SiNextdotjs, SiPhp, SiFigma } from "react-icons/si";
+import {
+  SiNextdotjs,
+  SiPhp,
+  SiFigma,
+  SiVite,
+  SiRedux,
+  SiOpenai,
+} from "react-icons/si";
 import {
   BiLogoNodejs,
   BiLogoMongodb,
@@ -12,6 +19,7 @@ import { AiFillHtml5 } from "react-icons/ai";
 
 import nssImage from "../../public/nssproject.png";
 import cineworldImage from "../../public/cineworldproject.png";
+import articleEaserImage from "../../public/articleEaserBannerImg.png";
 
 export const links = [
   {
@@ -38,7 +46,24 @@ export const projectsData = [
     title: "Cineworld- Movie API",
     description:
       "CineWorld is a movie and tv shows streaming website created using TMDB API in React-Next JS Framework and Tailwind CSS.",
-    Icon: [RiReactjsFill, SiNextdotjs, RiJavascriptFill, BiLogoTailwindCss],
+    Icon: [
+      {
+        Iconfile: RiReactjsFill,
+        iconTooltip: "React JS",
+      },
+      {
+        Iconfile: SiNextdotjs,
+        iconTooltip: "Next JS",
+      },
+      {
+        Iconfile: RiJavascriptFill,
+        iconTooltip: "JavaScript",
+      },
+      {
+        Iconfile: BiLogoTailwindCss,
+        iconTooltip: "Tailwindcss",
+      },
+    ],
     imageUrl: cineworldImage,
     githubLink: "https://github.com/alanvarghesepaul22/CINEWORLD-NextJS",
     liveSiteLink: "https://cineworld-swart.vercel.app/",
@@ -48,10 +73,54 @@ export const projectsData = [
     title: "NSS Website with Blood Management System",
     description:
       "This is a website developed by the students of SCMS School of Engineering and Technology (SSET) for the National Service Scheme (NSS) Units of the college as a part of the micro project(42 Silicon valley). This website also contains a hyperlink to another website which is a E-Blood donation management system ",
-    Icon: [AiFillHtml5, BiLogoCss3, RiJavascriptFill, SiPhp],
+    Icon: [
+      {
+        Iconfile: AiFillHtml5,
+        iconTooltip: "Html",
+      },
+      {
+        Iconfile: BiLogoCss3,
+        iconTooltip: "Css",
+      },
+      {
+        Iconfile: RiJavascriptFill,
+        iconTooltip: "JavaScript",
+      },
+      {
+        Iconfile: SiPhp,
+        iconTooltip: "Php",
+      },
+    ],
     imageUrl: nssImage,
     githubLink: "https://github.com/alanvarghesepaul22/nss-sset-website",
     liveSiteLink: "https://nss-sset.000webhostapp.com/",
+  },
+  {
+    id: 3,
+    title: "ArticleEaser - An Article Summarization platform using OpenAI",
+    description:
+      "ArticleEaser is a cutting-edge online platform powered by OpenAI's ChatGPT 4, designed to simplify the process of summarizing lengthy articles. With the integration of RapidApi's API, it offers users a seamless and efficient way to generate concise, coherent summaries of complex articles, making information digestion a breeze.",
+    Icon: [
+      {
+        Iconfile: SiVite,
+        iconTooltip: "Vite JS",
+      },
+      {
+        Iconfile: SiOpenai,
+        iconTooltip: "OpenAI",
+      },
+      {
+        Iconfile: SiRedux,
+        iconTooltip: "Redux",
+      },
+      {
+        Iconfile: BiLogoTailwindCss,
+        iconTooltip: "Tailwindcss",
+      },
+    ],
+    imageUrl: articleEaserImage,
+    githubLink: "https://github.com/alanvarghesepaul22/ArticleEaser-AI",
+    liveSiteLink: "https://article-easer-ai.vercel.app/",
   },
 ] as const;
 
