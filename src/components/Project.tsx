@@ -25,7 +25,7 @@ export default function Project() {
               key={id}
             >
               <div className="w-2/4 md:w-3/5">
-                <Image src={imageUrl} height={400} width={400} alt="image" />
+                <Image src={imageUrl} height={400} width={400} alt="image" unoptimized />
               </div>
               <div className="flex flex-col items-center md:items-start w-fit space-y-4 md:ml-5">
                 <p className="font-semibold  text-lg md:text-xl text-center">
