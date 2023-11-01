@@ -13,6 +13,7 @@ import {
   BiLogoGit,
   BiLogoTailwindCss,
   BiLogoCss3,
+  BiLogoTypescript,
 } from "react-icons/bi";
 
 import { AiFillHtml5 } from "react-icons/ai";
@@ -20,6 +21,7 @@ import { AiFillHtml5 } from "react-icons/ai";
 import nssImage from "../../public/nssproject.png";
 import cineworldImage from "../../public/cineworldproject.png";
 import articleEaserImage from "../../public/articleEaserBannerImg.png";
+import xynaspetechImage from "../../public/xynaspetechImg.png"
 
 export const links = [
   {
@@ -43,6 +45,33 @@ export const links = [
 export const projectsData = [
   {
     id: 1,
+    title: "Xynapse Technologies Pvt. Ltd. - Official Website",
+    description:
+      "As a dedicated web developer at Xynapse Technologies Pvt. Ltd., I had the privilege to be an integral part of the development of the company's official website. This project not only provided me with the opportunity to showcase my full-stack web development skills but also allowed me to contribute to the online presence of a leading technology company. Our team is working on the continuous improvement for an optimized user experience.",
+    Icon: [
+      {
+        Iconfile: RiReactjsFill,
+        iconTooltip: "React JS",
+      },
+      {
+        Iconfile: SiNextdotjs,
+        iconTooltip: "Next JS",
+      },
+      {
+        Iconfile: BiLogoTypescript,
+        iconTooltip: "Typescript",
+      },
+      {
+        Iconfile: BiLogoTailwindCss,
+        iconTooltip: "Tailwindcss",
+      },
+    ],
+    imageUrl: xynaspetechImage,
+    githubLink: "https://github.com/xynapsetech/company-website-nextjs",
+    liveSiteLink: "https://www.xynapsetechnologies.com/",
+  },
+  {
+    id: 2,
     title: "Cineworld- Movie API",
     description:
       "CineWorld is a movie and tv shows streaming website created using TMDB API in React-Next JS Framework and Tailwind CSS.",
@@ -69,7 +98,7 @@ export const projectsData = [
     liveSiteLink: "https://cineworld-swart.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     title: "NSS Website with Blood Management System",
     description:
       "This is a website developed by the students of SCMS School of Engineering and Technology (SSET) for the National Service Scheme (NSS) Units of the college as a part of the micro project(42 Silicon valley). This website also contains a hyperlink to another website which is a E-Blood donation management system ",
@@ -96,7 +125,7 @@ export const projectsData = [
     liveSiteLink: "https://nss-sset.000webhostapp.com/",
   },
   {
-    id: 3,
+    id: 4,
     title: "ArticleEaser - An Article Summarization platform using OpenAI",
     description:
       "ArticleEaser is a cutting-edge online platform powered by OpenAI's ChatGPT 4, designed to simplify the process of summarizing lengthy articles. With the integration of RapidApi's API, it offers users a seamless and efficient way to generate concise, coherent summaries of complex articles, making information digestion a breeze.",
