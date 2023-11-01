@@ -38,6 +38,7 @@ export default function Intro() {
                 width="192"
                 alt="imageLogo"
                 className="h-auto w-14 lg:w-20 rounded-full border-[.35rem] object-cover border-white dark:border-gray-400 shadow-xl"
+              unoptimized
               />
             </motion.div>
 
